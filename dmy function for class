@@ -23,10 +23,16 @@ if (dd + "/" + mm + "/" + d.Year == "1/1/1753" || dd + "/" + mm + "/" + d.Year =
 
 return "";
 
+else if(f == 0)
+
+return mm + "/" + dd + "/" + d.Year;
+
+else if(f==1) 
+
+return dd + "/" + mm + "/" + d.Year;
+
 else
 
-if(f == 0)
-return mm + "/" + dd + "/" + d.Year;
-else if(f==1) 
-return dd + "/" + mm + "/" + d.Year;
+return mm + "-" + dd + "-" + d.Year;
+
 }
