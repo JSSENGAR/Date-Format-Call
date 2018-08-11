@@ -1,0 +1,32 @@
+public string dmy(DateTime d, int f)
+{
+
+string dd = "", mm = "";
+
+if (d.Day >= 1 && d.Day <= 9)
+
+dd = "0" + d.Day;
+
+else
+
+dd = d.Day.ToString();
+
+if (d.Month >= 1 && d.Month <= 9)
+
+mm = "0" + d.Month;
+
+else
+
+mm = d.Month.ToString();
+
+if (dd + "/" + mm + "/" + d.Year == "1/1/1753" || dd + "/" + mm + "/" + d.Year == "01/01/1753")
+
+return "";
+
+else
+
+if(f == 0)
+return mm + "/" + dd + "/" + d.Year;
+else if(f==1) 
+return dd + "/" + mm + "/" + d.Year;
+}
